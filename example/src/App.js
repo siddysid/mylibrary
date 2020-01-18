@@ -1,13 +1,32 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'mylibrary'
+import ExampleNewsfeed from 'mylibrary'
 
 export default class App extends Component {
+
+  actEvent = (e) => {
+    console.log(e.target.dataset.type);
+    console.log(e.target.dataset.id);
+  }
+
   render () {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
+      <ExampleNewsfeed 
+       id='id'
+       api='http://5dea7b020710f800142103a7.mockapi.io/page_[[]]'
+       start='1'
+       pagination='offset'
+       infinityScroll='true'
+       layout={ 
+         {
+           avatar_name_createdAt:"AvatarNameDate",
+           imageUrl:"RectangleImage",
+           caption:"TextBold",
+           customButton:"CustomButton",
+           __:"ActLikeShare"
+         } 
+        }
+      onClick={this.actEvent}
+      />
     )
   }
 }

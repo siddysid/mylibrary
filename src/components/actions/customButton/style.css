@@ -1,0 +1,14 @@
+
+.custombutton{
+    margin-top: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    border-width: thin;
+    border-top: 0.5px solid #CCCCCC;
+}
+
+.button{
+	text-align: center;
+  }
+
